@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -35,4 +37,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+.button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: #fece2f;
+  color: white;
+
+  transition: all .3s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  opacity: 0.7;
 }

@@ -2,15 +2,14 @@ import './App.css';
 import { useEffect } from 'react';
 import { ethers } from "ethers";
 function App() {
-useEffect(()=>{
+
   const connect = async()=>{
   const provider = new ethers.providers.Web3Provider(window.ethereum)
   const res = await provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner()
   console.log(res);
   }
-  connect();
-}, [])
+
 const blockExplorerUrl = "https://bscscan.com"
 const chainId = 56;
 const nodes = ["https://bsc-dataseed.binance.org/", "https://bsc-dataseed1.defibit.io/", "https://bsc-dataseed1.ninicoin.io/"]
@@ -37,7 +36,8 @@ async function setupNetwork() {
 }
   return (
     <div className="App">
-  <button onClick={setupNetwork}>Change Chain</button>
+  <button className="button" onClick={connect}>Connect to MetaMask</button>
+  <button className="button" onClick={setupNetwork}>Change Chain</button>
     </div>
   );
 }
