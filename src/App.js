@@ -1,5 +1,4 @@
 import './App.css';
-import { useEffect } from 'react';
 import { ethers } from "ethers";
 function App() {
 
